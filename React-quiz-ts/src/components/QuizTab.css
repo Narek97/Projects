@@ -1,0 +1,13 @@
+.ant-tabs-content-holder {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ant-tabs-nav {
+  width: 60%;
+  color: #ffffff;
+  margin: auto !important;
+}
+

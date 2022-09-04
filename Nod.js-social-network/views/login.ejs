@@ -1,0 +1,29 @@
+
+	<% if(error){ %>
+
+		<% error.forEach(function(i){ %>
+			
+			<h5 class="err"><%=i.msg %></h5>
+
+		<% }) %>
+
+	<% } %>
+
+	<div class="form">
+		<br>
+		<h1>Enter the site</h1>
+		<br><br>
+		<form action="/logform" method="post">
+			<input type="emai" placeholder="email" name="email" value="<%=(form)?form.email:''%>">
+			<br><br>
+			<p><a href="">Forgot email?</a></p>
+			<br>
+			<input type="password" placeholder="password"name="password" minlength="6" maxlength="16">
+			<br><br>
+			<p><a href="">Forgot password?</a></p>
+			<br><br><br>
+			<button>Entrance</button>
+		</form>
+		<br>
+		<a href="/"><button class="reg">Registration</button></a>
+	</div>

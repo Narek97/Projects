@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style1.css">
+<!-- <link rel="stylesheet" href="../public/style1.css"> -->
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- iconi hamar -->
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+</head>
+<body>
+
+      <header>
+
+        <div class="settingdiv" style="display: none;" >
+
+                    <div class="update">
+
+                          <!-- tvyalnery ubdate anelu hamar  -->
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="settingupdate">
+                            update
+                          </button>
+                          <!-- .................................... -->
+
+                     </div> 
+                     
+                  <!-- nkary update anelu hamar -->
+                  <form action="/updateimage" method="post" class="img" enctype="multipart/form-data">
+                    
+                    <input type="file" name="avatar" class="settingimage" id="files">
+
+                  </form>
+                  <!-- ..................................... -->
+
+          </div>
+
+
+           <!-- .................................................... nor das1 -->
+           <!-- poisk -->
+
+                  <input type="text" class="search" placeholder="search">
+                  <div class="resultdiv">
+                              
+                  </div>
+
+          <div class="menu">
+            
+              <ul class="entamenu">
+
+ 
+                  <li> <b><img src="<%=user.img%>" alt="" class="avatarmenu"><a href="/myprofile"> <%=user.name%></a></b></li>
+                  <li> <b><a href="/profile">Home</a></b></li>
+                  <li class="hayt"><i class="fas fa-user-friends"></i></li>
+                  <li class="msg"><i class="fab fa-facebook-messenger"></i></li>
+                  <li><a href="/login" class="logout"><i class="fas fa-sign-out-alt">Logout</a></i></li>
+                  <li class="setting"><i class="fas fa-cog" ></i></li>
+
+              </ul>
+
+          </div> 
+
+          <div class="myfreands" style="display: none;"><!--  vor click aneluch divy anhetana script.js um toogle graty ashxati -->
+            
+
+          </div>
+
+
+
+
+
+
+
+
+          
+    </header>
+
+
+ <%-body %>  <!-- stex inch grum enq myus ejerin verabervuma -->
+
+                            <!-- The Modal -->
+                          <div class="modal" id="myModal">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                          
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                  <h4 class="modal-title">Modal Heading</h4>
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                          
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                  <input type="text" placeholder="name"  class="name" value="<%=user.name%>"><br><br>
+                                  <input type="text" placeholder="surname" class="surname" value="<%=user.surname%>"><br><br>
+                                  <input type="number" placeholder="age" class="age" value="<%=user.age%>">
+                                </div>
+                          
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-danger save" >Save</button>
+                                </div>
+                          
+                              </div>
+                            </div>
+                          </div>
+
+</body>
+    <script src="/js/sqript.js"></script>
+  
+    <!-- .................................socket -->
+    <script src="/socket.io/socket.io.js"></script>
+
+
+    <script>
+      var socket = io('/chat');
+
+      $(".msg").click(function(){
+
+             $(".messenger").toggle()
+             $(".settingdiv").hide() //vor messengeri vra sexmenq mesingeri bachaty kori
+             $(".myfreands").hide()  //nuyny es
+
+     })
+
+      $('.anun').click(function(){
+        var myid = $(".mess").attr('data-id')
+        let id = $(this).attr('data-id')
+        $(".mess").attr('u_id',id)
+        socket.emit("msg",{id,myid})
+        console.log(id,myid)
+
+        socket.on("oldmsg",function(data){
+
+           $(".messages").empty()
+          data.forEach(function(i){
+
+
+          $(".messages").append(`<div >
+
+          <b>${i.name}</b>
+          <i>${i.time}</i>
+          <p>${i.message}</p>
+
+          </div>`)
+          })
+          
+        })
+
+      })
+
+      $(".mess").change(function(){
+
+      var myid = $(this).attr("data-id")
+      var id = $(this).attr("u_id")
+      var message = $(this).val()
+      $(this).val("")
+      socket.emit("sendmsg",{myid,id,message})
+    })
+
+        socket.on("newmsg",function(data){
+
+
+            var x = data.message.split(" ")
+        for(let i = 0; i<x.length;i++) {
+
+          if(x[i]==":1"){
+            x[i]= (`<a href="#" title=":1"><img  src="..//img/1.png"  width="20"  /></a>`)
+          }
+          if(x[i]==":2"){
+            x[i]= (`<a href="#" title=":1"><img  src="..//img/2.png"  width="20"  /></a>`)
+          }
+          if(x[i]==":3"){
+            x[i]= (`<a href="#" title=":1"><img  src="..//img/3.png"  width="20"  /></a>`)
+          }
+
+           if(x[i]==":4"){
+            x[i]= (`<a href="#" title=":1"><img  src="..//img/4.png"  width="20"  /></a>`)
+          }
+
+
+
+        }
+
+        x=x.join(" ")
+
+        $(".messages").append(`<div>
+
+          <b>${data.name}</b>
+          <p>${x}</p>
+          <i>${data.time}</i>
+            </div>`)
+
+    })
+
+
+     
+    </script>
+
+   
+</html>
+
+ 

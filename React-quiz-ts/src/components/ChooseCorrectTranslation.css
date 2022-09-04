@@ -1,0 +1,24 @@
+.choose-correct-translation {
+  text-align: center;
+}
+
+.ant-radio-wrapper {
+  margin: 20px;
+  color: #cd0001;
+}
+
+.ant-radio-wrapper > span {
+  width: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.ant-radio {
+  width: 16px !important;
+  border-radius: 50%;
+}
+
+.choose-correct-translation--btn{
+    margin: 40px auto;
+    width: 100px;
+}

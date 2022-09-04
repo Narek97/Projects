@@ -1,0 +1,22 @@
+
+.mainLayout .ant-layout-header {
+    background: #c4c4c4;
+    padding: 0;
+    height: auto;
+    line-height: 1.6;
+  }
+ 
+  .header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+  }
+
+  .logout{
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .logout:hover{
+   color: #6495ed;
+  }

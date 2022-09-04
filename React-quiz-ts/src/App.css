@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Edu QLD Beginner", cursive;
+}
+
+body > #root > div {
+  height: 100vh;
+}
+
+.app{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page-not-found {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #cd0001;
+}
+
+
+

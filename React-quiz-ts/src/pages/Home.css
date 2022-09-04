@@ -1,0 +1,12 @@
+.home {
+    height: calc(100% - 64px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home > h1 {
+    font-size: 24px;
+    text-align: center;
+    color: #cd0001;;
+}

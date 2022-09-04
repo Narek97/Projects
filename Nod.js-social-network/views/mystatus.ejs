@@ -1,0 +1,12 @@
+	<% if(status){ %>
+
+		<% status.forEach(function(i){ %>
+			
+			<br>
+			<div class="mystatusdiv"> <%=i.status %> <button style="float: left;">Delete</button> </div>
+			<br>
+
+		<%  }) %>
+
+
+  <% } %>

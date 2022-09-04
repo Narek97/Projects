@@ -1,0 +1,27 @@
+export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
+export const REGISTER_FAIL = "REGISTER_FAIL";
+//
+
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGIN_FAIL = "LOGIN_FAIL";
+//
+
+export const LOGOUT_SUCCESS = "LOGOUT_SUCCESS";
+export const LOGOUT_FAIL = "LOGOUT_FAIL";
+//
+export const SET_USER = "SET_USER";
+//
+export const LOADING_START = "LOADING_START";
+export const LOADING_END = "LOADING_END";
+// //////////
+export const LOAD_TEXT_BLOCK_START = "LOAD_TEXT_BLOCK_START";
+export const LOAD_TEXT_BLOCK_SUCCESS = "LOAD_TEXT_BLOCK_SUCCESS";
+export const LOAD_TEXT_BLOCK_FAIL = "LOAD_TEXT_BLOCK_FAIL";
+//
+export const SAVE_TEXT_BLOCK_FAIL = "SAVE_TEXT_BLOCK_FAIL";
+//
+export const CHANGE_BLOCK_POSITION = "CHANGE_BLOCK_POSITION";
+//
+export const ADD_NEW_TEXT_BLOCK = "ADD_NEW_TEXT_BLOCK";
+//
+export const DELETE_TEXT_BLOCK = "DELETE_TEXT_BLOCK";

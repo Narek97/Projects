@@ -1,0 +1,13 @@
+.notFound {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 50px;
+  color: red;
+}
+
+.backLink {
+  text-decoration: none;
+}

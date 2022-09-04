@@ -1,0 +1,33 @@
+.form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:#f8f8f8;
+    padding: 6% 12%;
+  }
+  
+  
+  .ant-row{
+    display: block !important;
+    width: 350px;
+  }
+  
+  .form-link{
+    color: rgb(10, 10, 10);
+    transition: .3s;
+  }
+  .form-link:hover{
+    color: #6495ed;
+  }
+  
+  
+  .form-error{
+    text-align: center;
+    color: #ff4d4f;;
+    font-size: 18px;
+  }
+
+  .form-button{
+      width: 100%;
+  }

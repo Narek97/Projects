@@ -1,0 +1,72 @@
+*{
+	margin: 0;
+	padding: 0
+}
+
+body{
+	background: #81acb8;
+	text-align: center;
+	background-image: url(img/nkar1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+.form{
+	width: 400px;
+	height: 520px;
+	background: #3d3d3d;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 10px;
+	margin-top: 70px;
+	background-image: url(img/nkar2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.form button{
+	background: #56c2e1;
+	height: 40px;
+	width: 150px;
+	cursor: pointer;
+}
+
+.form button:hover{
+	background: #10e23c;
+}
+
+.form input{
+	border-style: none;
+	width: 250px;
+	height:40px; 
+	border-bottom: 2px solid ;
+	background:#d5ded6;
+
+}
+
+.form h1,p,h5,a{
+	color: white;
+}
+
+.err{
+	text-align: center;
+	color:red;
+	
+}
+
+.form a{
+	text-decoration: none;
+}
+
+.form a:hover{
+	color: red;
+
+}
+
+
+
+
+
+
+

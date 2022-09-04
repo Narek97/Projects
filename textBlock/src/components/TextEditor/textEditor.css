@@ -1,0 +1,15 @@
+.slate{
+    margin: 10px;
+    background: #7ec1ff;
+    min-height: 80px;
+    border-radius: 4px;
+    color: #f70000;
+    padding: 6px;
+}
+
+.text-button{
+    margin: 10px;
+}
+.button-container{
+    text-align: center;
+}

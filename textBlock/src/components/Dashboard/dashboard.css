@@ -1,0 +1,54 @@
+.ant-layout-content{
+    background-color: white;
+    padding: 10px ;
+}
+.content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container{
+    background: whitesmoke;
+}
+.block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px ;
+    padding: 10px;
+
+}
+
+.item{
+    position: relative;
+    width: 100%;
+    height: auto;
+    cursor: grab;
+    border-bottom: 1px solid #c41d7f;
+    font-size: 20px;
+    margin: 0 4px;
+    padding: 10px;
+}
+
+.ant-tag .ant-tag-magenta{
+    font-size: 14px;
+}
+
+.bottom{
+    height: 4px;
+    border-bottom: 4px solid #0011ff;
+    opacity: 0;
+}
+
+.right{
+    height: 40px;
+    border-right: 4px solid #0011ff;
+    opacity: 0;
+}
+
+.warring{
+    text-align: center;
+    color: coral;
+}

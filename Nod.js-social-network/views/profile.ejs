@@ -1,0 +1,88 @@
+  <!-- skzbnakan ejy chuych talu hamar -->
+  <div class="div1">
+          
+             <!-- ................................. nor das-->
+             <!-- skzbnakan nkar dnelu hamar -->
+	            <img src="<%=user.img%>" alt="" class="avatar">
+                <br><br>
+	            <h5 class="username"><%=user.name%> <%=user.surname%> <%=user.age%></h5>
+
+   </div> 
+
+
+   <div class="div2">
+
+              <!-- ............................................. das 6 -->
+              <!-- ete unnenq form u uzum enq aranch button kochaki ayn ashxati karanq js ognutyamb anenq -->
+             <form action="/status" method="post" class="statusform">
+        
+                  <div class="stsusdiv">
+                        
+                        
+                        <textarea  name="textarea" id="" cols="30" rows="10" class="status" placeholder="status">
+                          
+
+
+
+                        </textarea>
+                        <!-- <input type="file" name="avatar" class="statusimage" id="files" type="button"> -->
+                        <button class="statusbutton">share</button>
+                        <button class="mystatus"><a href="/mystatus">mystatus</a></button>
+              
+                  </div>
+        
+             </form>
+             <br>
+              <div class="frendstatus">
+
+                  
+                
+              </div>
+
+	
+         
+  </div>
+
+
+<!-- namak greluc tvyalnery chuych talu hamar -->
+  <div class="div3">
+    
+        <div class="messenger" style="position: fixed;">
+        
+            <div class="msgfreands">
+                <%arr.forEach((a)=>{ %>
+              <!-- userneri tvyalnery -->
+        
+        
+                                                                                                                    <!-- useri-id -->
+                <div style="border: 1px solid"><img src="<%=a.img %>" alt="" style="width: 50px" > <p class='anun' data-id='<%=a.id%>'> <%=a.name%> <%=a.surname %></p></div> 
+              <% }) %>
+              
+            </div>
+        
+            <div class="messages">
+              
+            </div>
+        
+            <div > 
+                <textarea name="" class=" mess" placeholder="Type message......." data-id='<%=user.id%>'> </textarea>
+                  
+  
+            </div>
+
+            <div class="divsmile">
+              <a href="#" title=":1"><img  src="../img/1.png"  width="20"  /></a>
+              <a href="#" title=":2"><img  src="../img/2.png"  width="20"  /></a>
+              <a href="#" title=":3"><img  src="../img/3.png"  width="20"  /></a>
+              <a href="#" title=":4"><img  src="../img/4.png"  width="20"  /></a>
+             
+            </div>
+          
+        
+        
+        </div>
+
+  </div>
+
+  
+

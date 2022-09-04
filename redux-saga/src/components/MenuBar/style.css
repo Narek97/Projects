@@ -1,0 +1,22 @@
+.menuBar {
+  height: 60px;
+  background-color: #364a5d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.navLink:hover {
+  color: rgb(255, 239, 150);
+}
+
+.selected {
+  color: gold;
+}

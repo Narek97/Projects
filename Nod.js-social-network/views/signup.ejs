@@ -1,0 +1,26 @@
+
+	<% if(error){ %>
+
+		<% error.forEach(function(i){ %>
+			
+			<h5 class="err"><%=i.msg %></h5>
+
+		<% }) %>
+
+	<% } %>
+
+<div class="form">
+	<h1>Registration</h1><br>
+	<!-- <br> -->
+	<!-- <p>Enter your login information to access your personal account.</p><br> -->
+	<form action="/regform" method="post">
+		<input type="text" placeholder="name" name="name" value="<%=(form)?form.name:''%>"    ><br><br>
+		<input type="text" placeholder="surname" name="surname" value="<%=(form)?form.surname:''%>" ><br><br>
+		<input type="number" placeholder="age" name="age" value="<%=(form)?form.age:''%>"><br><br>
+		<input type="emai" placeholder="email" name="email" value="<%=(form)?form.email:''%>" ><br><br>
+		<input type="password" placeholder="password"name="password" minlength="6" maxlength="16"><br><br>
+		<input type="password" placeholder="passwordconfirm" name="passwordconfirm" ><br><br>
+		<button>Registration</button><br><br>
+	</form>
+	<a href="/login"><button class="reg">Entrance</button></a>
+</div>

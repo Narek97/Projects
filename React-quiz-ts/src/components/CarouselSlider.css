@@ -1,0 +1,14 @@
+.carousel--slid {
+  height: 250px;
+}
+
+.carousel-btn {
+  margin: 0 20px;
+}
+
+@media only screen and (max-width: 500px) {
+  .carousel--slid {
+    height: 330px;
+  }
+
+}

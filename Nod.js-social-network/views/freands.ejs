@@ -1,0 +1,55 @@
+
+<!-- fendi vra sexmeluch im frendnerin chuych talu hamar -->
+
+<!-- im tvyalnery chuych talu hamar -->
+<br><br><br>
+<div class="mybagraundimg">
+		
+
+	 <img src="<%=user.img%>" alt="" class="avatar myprofileavatar">  
+	 
+
+</div>
+
+<div class="myprofilediv">
+
+	<ul class="entamenu">
+		
+		<li><h5><%=user.name%> <%=user.surname%> <%=user.age%></h5></li>
+		<li><a href="/myprofile">Chronicle</a></li>
+		<li class="freands"><a href="/freands">Friends</a></li>
+		<li><a href="/photo">Photo</a></li>
+		<!-- <li><a href="/mystatus">mystatus</a></li> -->
+	
+	</ul>
+
+</div>
+<!-- ................................ -->
+
+
+<div class="freandsdiv">
+
+	<% if(arr){ %>
+
+		<% arr.forEach(function(i){ %>
+				
+			<div class="frenddiv">
+
+					<!-- frendi ej gnalu hamar hame frendnerin chuych talu hamar-->
+					<img src="<%=i.img %>" alt="" style = "width: 50px"> <a href="/friend/<%=i.id%>" ><%=i.name %> <%=i.surname %></a>	
+					<!-- .............................. -->
+					<br>
+					<button class = "delete" data-id="<%=i.id %>" style = ""> Delete </button>
+
+
+			</div> 
+			
+	  <%  }) %>
+
+
+  <% } %>
+	
+
+
+
+</div>

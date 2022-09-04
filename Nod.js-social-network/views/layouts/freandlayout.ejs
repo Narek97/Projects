@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- iconi hamar -->
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+ <style>
+ 	
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+header{
+  height: 50px;
+    width: 100%;
+    background-color: #3a8aa6;
+    position: fixed;
+}
+
+
+.menu{
+  height: 50px;
+    width: 40%;
+    margin-left: 15%
+}
+
+.entamenu{
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  list-style: none;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+.entamenu a{  
+  color: black;
+}
+
+
+.entamenu a:hover{
+  text-decoration: none;
+  background-color: #0c4c63;
+  color: white;
+}
+
+.search{
+  position: absolute;
+  width: 350px;
+  margin-top: 10px;
+  margin-left: 60%;
+}
+
+.resultdiv{
+  position: absolute;
+  width: 350px;
+  margin-left: 60%;
+  margin-top: 40px;
+  background: white;
+  border:1px solid #3a8aa6;
+}
+
+.hayt,.msg,.setting{
+  cursor: pointer;
+  font-size: 25px
+}
+
+.logout{
+  position: absolute;
+  margin-left: 42%;
+}
+
+.avatarmenu{
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+}
+
+.myfreands{
+  width: 200px;
+  margin-left: 34%;
+  position: absolute;
+  background-color:#f2f2f2;
+  border:1px solid #ccd0d5;
+}
+
+.settingdiv{
+  margin-left: 49%;
+  margin-top: 50px;
+  width: 140px; 
+  overflow: hidden;
+  position: absolute;
+  border:1px solid #ccd0d5;
+  background-color:#f2f2f2;
+}
+
+#settingupdate{
+  width: 130px;
+  background-color:#f2f2f2;
+  color: black;
+
+}
+.settingimage{
+  width: 130px;
+  border:1px solid #007bff;
+  margin-top: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+
+
+.messenger{
+  width: 400px;
+  margin-top: 12%;
+  display: none;
+  float: right;
+}
+
+.msgfreands{
+
+  width: 150px;
+  height: 300px;
+  background-color: #e9ebee;
+  border: 1px solid;
+  float: right;
+  overflow: auto;
+  border-radius: 10px 10px 0 0;
+
+
+}
+
+.messages{
+  height: 250px;
+  width: 250px;
+  border: 1px solid;
+  overflow: auto;
+  background-color: #e9ebee;
+  border-radius: 10px 10px 0 0;
+  float: left;
+  word-break: break-all;
+}
+
+.mess{
+  width: 250px;
+  height: 50px;
+  resize: none;
+  border: 1px solid;
+  float: left;
+}
+
+/*..................................................freand.ejs*/
+
+.freandsdiv{
+  width: 70%;
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 50px;
+  background: #e9ebee;
+}
+
+.frenddiv{
+  width: 350px;
+  height: 100px;
+  border: 1px solid #b9b9bb; 
+  background: white;
+  margin-left: 50px;
+  margin-top: 20px;
+  float: left;
+}
+
+
+
+/*................................................. profil.ejs*/
+
+.div1{
+
+  width: 20%;
+  margin-top: 60px;
+  float: left;
+
+}
+
+.div2{
+  width: 50%;
+  margin-top: 60px;
+  float: left;  
+}
+
+.div3{
+  margin-top: 15%;
+  width: 25%;
+  float: left;
+
+}
+
+.avatar{
+  width: 230px;
+  height: 250px;
+  margin-left: 20px;
+}
+
+.username{
+  margin-left: 20px;
+}
+
+.stsusdiv{
+  width: 80%;
+  height: 100px;
+  padding-top: 10px;
+  padding-left: 20px;
+  background: #e9ebee;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+
+.status{
+  height: 40px;
+  width: 90%;
+  resize: none;
+  margin-left: 20px
+}
+.statusimage{
+  width: 120px;
+  margin-left: 20px;
+
+}
+
+.frendstatus{
+  margin-left: 10%; 
+  width: 80%;
+}
+
+/*..................*/
+.comm{
+  height: 200px;
+  background-color: #e9ebee;
+  overflow: auto;
+  display: none;
+  margin-top: 40px;
+  word-break: break-all;
+  
+}
+
+.commtext{
+  resize: none;
+  width: 80%;
+  border-radius: 10px;
+  margin-left: 40px
+
+}
+/*...............*/
+
+.mystatus a{
+  color: black
+}
+.mystatus a:hover{
+  text-decoration: none;
+  color: black
+
+}
+
+.mystatusdiv{
+  background-color: #c0c8d4;
+  width: 100%;
+  position: absolute;
+  margin-top: 30px
+}
+
+/*...................................myprofile.ejs*/
+
+.mybagraundimg{
+  width: 70%;
+  margin-left: 50px;
+  /*background: red;*/
+  padding-top: 10%;
+  background-image: url(../img/1.jpeg);
+}
+
+.myprofilediv{
+  width: 70%;
+  height: 50px;
+  margin-left: 50px;
+  background: #e9ebee;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.freands{
+  color: black
+}
+
+.photodiv{
+  padding-top: 20px;
+  width: 70%;
+  height: auto;
+  margin-left: 50px;
+  background: #e9ebee;
+ 
+}
+
+.addphoto{
+  border: 2px solid #d2d5d8;
+  cursor: pointer;
+  background: #e9ebee;
+  margin-left: 85%;
+}
+
+.photo{
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  float: left;
+  border: 2px solid #e9ebee;
+  padding-left: 20px;
+}
+
+
+
+
+ </style>
+
+</head>
+<body>
+
+
+      <header>
+
+        <div class="settingdiv" style="display: none;" >
+
+                    <div class="update">
+
+                          <!-- tvyalnery ubdate anelu hamar  -->
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="settingupdate">
+                            update
+                          </button>
+                          <!-- .................................... -->
+
+                     </div> 
+                     
+                  <!-- nkary update anelu hamar -->
+                  <form action="/updateimage" method="post" class="img" enctype="multipart/form-data">
+                    
+                    <input type="file" name="avatar" class="settingimage" id="files">
+
+                  </form>
+                  <!-- ..................................... -->
+
+          </div>
+
+
+           <!-- .................................................... nor das1 -->
+           <!-- poisk -->
+
+                  <input type="text" class="search" placeholder="search">
+                  <div class="resultdiv">
+                              
+                  </div>
+
+          <div class="menu">
+            
+              <ul class="entamenu">
+
+ 
+                  <li> <b><img src="<%=user.img%>" alt="" class="avatarmenu"><a href="/myprofile"> <%=user.name%></a></b></li>
+                  <li> <b><a href="/profile">Home</a></b></li>
+                  <li class="hayt"><i class="fas fa-user-friends"></i></li>
+                  <li class="msg"><i class="fab fa-facebook-messenger"></i></li>
+                  <li><a href="/login" class="logout"><i class="fas fa-sign-out-alt">Logout</a></i></li>
+                  <li class="setting"><i class="fas fa-cog" ></i></li>
+
+              </ul>
+
+          </div> 
+
+          <div class="myfreands" style="display: none;"><!--  vor click aneluch divy anhetana script.js um toogle graty ashxati -->
+            
+
+          </div>
+
+          
+    </header>
+
+
+ <%-body %>  <!-- stex inch grum enq myus ejerin verabervuma -->
+
+                            <!-- The Modal -->
+                          <div class="modal" id="myModal">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                          
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                  <h4 class="modal-title">Modal Heading</h4>
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                          
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                  <input type="text" placeholder="name"  class="name" value="<%=user.name%>"><br><br>
+                                  <input type="text" placeholder="surname" class="surname" value="<%=user.surname%>"><br><br>
+                                  <input type="number" placeholder="age" class="age" value="<%=user.age%>">
+                                </div>
+                          
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-danger save" >Save</button>
+                                </div>
+                          
+                              </div>
+                            </div>
+                          </div>
+
+
+
+                          
+
+</body>
+    <script src="/js/sqript.js"></script>
+  
+    <!-- .................................socket -->
+    <script src="/socket.io/socket.io.js"></script>
+
+
+    <script>
+      var socket = io('/chat');
+
+      $(".msg").click(function(){
+
+             $(".messenger").toggle()
+             $(".settingdiv").hide() //vor messengeri vra sexmenq mesingeri bachaty kori
+             $(".myfreands").hide()  //nuyny es
+
+     })
+
+      $('.anun').click(function(){
+        var myid = $(".mess").attr('data-id')
+        let id = $(this).attr('data-id')
+        $(".mess").attr('u_id',id)
+        socket.emit("msg",{id,myid})
+        console.log(id,myid)
+
+        socket.on("oldmsg",function(data){
+
+           $(".messages").empty()
+          data.forEach(function(i){
+
+
+          $(".messages").append(`<div >
+
+          <b>${i.name}</b>
+          <i>${i.time}</i>
+          <p>${i.message}</p>
+
+          </div>`)
+          })
+          
+        })
+
+      })
+
+      $(".mess").change(function(){
+
+      var myid = $(this).attr("data-id")
+      var id = $(this).attr("u_id")
+      var message = $(this).val()
+      $(this).val("")
+      socket.emit("sendmsg",{myid,id,message})
+    })
+
+        socket.on("newmsg",function(data){
+
+        $(".messages").append(`<div>
+
+          <b>${data.name}</b>
+          <p>${data.message}</p>
+          <i>${data.time}</i>
+            </div>`)
+
+    })
+
+
+     
+    </script>
+
+   
+</html>
+
+ 
+

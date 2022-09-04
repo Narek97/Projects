@@ -1,0 +1,45 @@
+<br><br><br>
+<div class="mybagraundimg">
+		
+
+	 <img src="<%=userr[0]['img']%>" alt="" class="avatar myprofileavatar">  
+	 
+
+</div>
+
+<div class="myprofilediv">
+
+	<ul class="entamenu">
+		
+		<li><h5><%=userr[0]['name']%> <%=userr[0]['surname']%> <%=userr[0]['age']%></h5></li>
+		<li><a href="">Chronicle</a></li>
+		<li class="freands"><a href="/frendfreands/<%=userr[0].id%>">Freands</a></li>
+		<li><a href="">Photo</a></li>
+		<!-- <li><a href="/mystatus">mystatus</a></li> -->
+	
+	</ul>
+
+</div>
+
+<div class="freandsdiv">
+
+	<% if(frendfreands){ %>
+
+		<% frendfreands.forEach(function(i){ %>
+				
+			<div class="frenddiv">
+
+					<!-- frendi ej gnalu hamar hame frendnerin chuych talu hamar-->
+					<img src="<%=i.img %>" alt="" style = "width: 50px"> <a href="/friend/<%=i.id%>" ><%=i.name %> <%=i.surname %></a>	
+					<!-- .............................. -->
+					
+				
+			</div> 
+			
+	  <%  }) %>
+
+
+  <% } %>
+
+</div>
+

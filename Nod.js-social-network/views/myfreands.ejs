@@ -1,0 +1,42 @@
+<!-- frendi vra sexmeluch heto um vra sexmenq ira ejy chuych talu hamar-->
+
+<!-- ynkeroj tvyalnery chuych talu hamar -->
+
+<br><br><br>
+<div class="mybagraundimg">
+		
+
+	 <img src="<%=userr[0]['img']%>" alt="" class="avatar myprofileavatar">  
+	 
+
+</div>
+
+<div class="myprofilediv">
+
+	<ul class="entamenu">
+		
+		<li><h5><%=userr[0]['name']%> <%=userr[0]['surname']%> <%=userr[0]['age']%></h5></li>
+		<li><a href="">Chronicle</a></li>
+		<li class="freands"><a href="/frendfreands/<%=userr[0].id%>">Freands</a></li>
+		<li><a href="">Photo</a></li>
+		<!-- <li><a href="/mystatus">mystatus</a></li> -->
+	
+	</ul>
+
+</div>
+<!-- ................................... -->
+
+
+<% if(status){ %>
+
+		<% status.forEach(function(i){ %>
+			<div style="">
+				<h5><%=i.name%> <%=i.surname%> updated status</h5>
+				<p><%=i.status %></p>
+                 <spum style="color:green;cursor:pointer;margin-left: 30px"><i class="far fa-thumbs-up like">Like</i></spum> <spum style="color:red;cursor:pointer;margin-left: 30px"><i class="far fa-thumbs-down dislike">Dislike</i></spum>  <spum style="cursor:pointer;margin-left: 30px"><i class="far fa-comment-dots comment"> Comment</i></button> </spum> <br> <div class="comm">
+				<br>
+			</div>
+		 <%  }) %>
+
+
+  <% } %>
